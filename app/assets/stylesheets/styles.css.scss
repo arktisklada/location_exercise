@@ -1,0 +1,157 @@
+/*body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}*/
+
+/*p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+*/
+
+
+html, body, input, select, textarea {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin: 10px 0px;
+  padding-bottom: 2px;
+}
+h1 {
+  border-bottom: 1px solid #333;
+}
+
+
+label {
+  display: block;
+}
+
+form .actions {
+  margin: 10px;
+  width: 100%;
+}
+
+
+@media only screen and (max-width : 400px) {
+  input, textarea {
+    width: 260px;
+    min-width: 260px;
+    max-width: 260px;
+
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+  }
+  select {
+    width: 272px;
+    min-width: 272px;
+    max-width: 272px;
+
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+  }
+}
+
+
+pre {
+  background-color: #eee;
+  font-size: 11px;
+  padding: 10px;
+}
+
+a {
+  color: #000;
+
+  &:visited {
+    color: #666;
+  }
+  &:hover {
+    color: #66F;
+  }
+}
+
+/*div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+#notice {
+  color: green;
+}
+*/
+.field_with_errors {
+  background-color: red;
+  display: table;
+  padding: 2px;
+}
+
+#error_explanation {
+  background-color: #f0f0f0;
+  border: 2px solid red;
+  margin-bottom: 20px;
+  padding: 7px;
+  padding-bottom: 0;
+  width: 450px;
+
+  h2 {
+    background-color: #c00;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    margin: -7px;
+    margin-bottom: 0px;
+    padding: 5px 5px 5px 15px;
+    text-align: left;
+  }
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+
+
+.message {
+  background-color: #ccc;
+  padding: 10px;
+
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+
+  &.success {
+    background-color: #C5E1FF;
+  }
+  &.error {
+    background-color: #f99;
+  }
+}
+
+#loading {
+  background: rgba(30, 30, 30, .3);
+  bottom: 0px;
+  display: none;
+  left: 0px;
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  z-index: 10000;
+
+  .indicator {
+    background-image: image-url("loader.gif") no-repeat center center;
+    height: 32px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    width: 32px;
+  }
+}
+
+
+body.overlay_present {
+  overflow-x: hidden;
+}

@@ -1,0 +1,36 @@
+<%= form_for(@event, remote: true) do |f| %>
+  <% if @event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+      <ul>
+      <% @event.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <div class="row">
+      <h3>Start</h3>
+      <%= f.label :date %>
+      <%= f.date_field :start_date, required: true %>
+      <%= f.label :time %>
+      <%= f.time_field :start_date_time, required: true %>
+    </div>
+    <div class="row">
+      <h3>End</h3>
+      <%= f.label :date %>
+      <%= f.date_field :end_date, required: true %>
+      <%= f.label :time %>
+      <%= f.time_field :end_date_time, required: true %>
+    </div>
+    <div class="state">
+      <%= select :event, :state_id, @states.collect {|s| [s.name, s.id]}, required: true %>
+    </div>
+    <div class="row">
+      <%= f.submit %>
+    </div>
+  </div>
+<% end %>

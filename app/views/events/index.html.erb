@@ -1,0 +1,7 @@
+<h1>Listing events</h1>
+
+<div class="row">
+  <%= link_to "Add new event", new_event_path, data: {ajax: true, url: 'events/new'} %>
+</div>
+
+<div id="calendar"></div>
