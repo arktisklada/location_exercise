@@ -19,7 +19,7 @@ class Event < ActiveRecord::Base
     query = self.sanitize_sql_array [
       "SELECT title, start, rownum FROM (" +
           "SELECT b.abbreviation as title, date(a.start_date) as start, " +
-            "row_number() OVER (PARTITION BY date(a.start_date) ORDER BY (date(a.start_date) - date(a.end_date)) DESC) as rownum FROM events AS a " + 
+            "row_number() OVER (PARTITION BY date(a.start_date) ORDER BY (date(a.end_date) - date(a.start_date)) DESC) as rownum FROM events AS a " + 
           "LEFT JOIN states AS b ON a.state_id = b.id WHERE a.user_id = ? " + 
           "AND (a.start_date > ? AND a.end_date < ?) " + 
           "GROUP BY date(a.start_date), abbreviation, a.start_date, a.end_date " +

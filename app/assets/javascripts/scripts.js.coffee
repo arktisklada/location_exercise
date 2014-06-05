@@ -34,7 +34,6 @@ $ ->
     $this = $(this)
     linkPushState($this.data('url'), (data) ->
       $body_container.html(data)
-      console.log("sadf")
     , true)
     return false
   )

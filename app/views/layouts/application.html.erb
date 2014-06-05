@@ -1,34 +1,34 @@
 <% if !@is_xhr %>
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Exercise</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title>Exercise</title>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
 
-  <div class="container" id="body_container">
-    <%= yield %>
-  </div>
-
-
-  <div id="loading">
-    <div class="indicator"></div>
-  </div>
-
-
-  <script id="message_template" type="text/x-handlebars-template">
-    <div class="message {{type}}">
-      {{message}}
+    <div class="container" id="body_container">
+      <%= yield %>
     </div>
-  </script>
 
-  <%= javascript_include_tag 'application' %>
-</body>
-</html>
+
+    <div id="loading">
+      <div class="indicator"></div>
+    </div>
+
+
+    <script id="message_template" type="text/x-handlebars-template">
+      <div class="message {{type}}">
+        {{message}}
+      </div>
+    </script>
+
+    <%= javascript_include_tag 'application' %>
+  </body>
+  </html>
 
 <% else %>
-<%= yield %>
+  <%= yield %>
 <% end %>
